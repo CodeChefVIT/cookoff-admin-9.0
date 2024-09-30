@@ -45,7 +45,7 @@
 To get started, fork your own copy and clone the master branch. To clone a branch you can run the following:
 
 ```bash
-git clone -b master https://github.com/<Your username>/cookoff-admin-9.0.git
+git clone -b main https://github.com/<Your username>/cookoff-admin-9.0.git
 ```
 
 Run these commands on your bash/terminal and open it in a code editor of your choice.
