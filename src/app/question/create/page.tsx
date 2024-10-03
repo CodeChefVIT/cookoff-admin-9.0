@@ -117,23 +117,16 @@ const Create = () => {
   return (
     <div className="m-10 space-y-10 text-white">
       <div className="flex items-center">
-        <Button
-          onClick={() => {
-            router.push("/dashboard");
-          }}
-          className="bg-bb hover:bg-slate-950"
-        >
-          <FaHome size={20} className="text-white" />
-        </Button>
+
         <h1 className="flex-grow text-center text-2xl font-bold text-accent">
           Add Questions
         </h1>
       </div>
-      <form className="space-y-10" onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-4 items-center gap-4">
+      <form className="space-y-10 " onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid grid-cols-4 items-center  gap-4">
           <Label
             htmlFor="title"
-            className="text-right text-lg font-bold text-primary"
+            className="text-right text-lg  font-bold text-white"
           >
             Title
           </Label>
@@ -148,7 +141,7 @@ const Create = () => {
         <div className="grid grid-cols-4 items-center gap-4">
           <Label
             htmlFor="description"
-            className="col-span-1 text-right text-lg font-bold text-primary"
+            className="col-span-1 text-right text-lg font-bold text-white"
           >
             Description
           </Label>
@@ -158,24 +151,24 @@ const Create = () => {
             placeholder="teri-mummy"
             className="col-span-3"
             {...register("description")}
-            rows={50}
+            rows={10}
           ></Textarea>
         </div>
 
         {/* Input Format Section */}
         <div className="grid grid-cols-4 items-center gap-4">
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center justify-end gap-2">
             <Label
               htmlFor="input_format"
-              className="col-span-3 whitespace-nowrap text-right text-lg font-bold text-primary"
+              className="col-span-3 whitespace-nowrap text-right text-lg font-bold text-white"
             >
               Input Format
             </Label>
             <Button type="button" onClick={addInputFormat}>
               +
             </Button>
-          </div>
-          <div className="col-span-3 flex w-full flex-col">
+          </div >
+          <div className="col-span-3 gap-2 flex w-full flex-col">
             {inputFormats.map((format, index) => (
               <div key={index} className="flex items-center gap-2">
                 <Textarea
@@ -201,7 +194,7 @@ const Create = () => {
         <div className="grid grid-cols-4 items-center gap-4">
           <Label
             htmlFor="points"
-            className="text-right text-lg font-bold text-primary"
+            className="text-right text-lg font-bold text-white"
           >
             Points
           </Label>
@@ -217,7 +210,7 @@ const Create = () => {
         <div className="grid grid-cols-4 items-center gap-4">
           <Label
             htmlFor="round"
-            className="text-right text-lg font-bold text-primary"
+            className="text-right text-lg font-bold text-white"
           >
             Round
           </Label>
@@ -237,7 +230,7 @@ const Create = () => {
         <div className="grid grid-cols-4 items-center gap-4">
           <Label
             htmlFor="constraints"
-            className="text-right text-lg font-bold text-primary"
+            className="text-right text-lg font-bold text-white"
           >
             Constraints
           </Label>
@@ -252,7 +245,7 @@ const Create = () => {
         <div className="grid grid-cols-4 items-center gap-4">
           <Label
             htmlFor="output_format"
-            className="text-right text-lg font-bold text-primary"
+            className="text-right text-lg font-bold text-white"
           >
             Output Format
           </Label>
@@ -265,11 +258,11 @@ const Create = () => {
         </div>
 
         {/* Sample Test Output Section */}
-        <div className="grid grid-cols-4 items-center gap-4">
-          <div className="flex flex-row items-center gap-2">
+        <div className="grid  grid-cols-4 items-center gap-4">
+          <div className="flex justify-end flex-row items-center gap-2">
             <Label
               htmlFor="sample_test_output"
-              className="whitespace-nowrap text-right text-lg font-bold text-primary"
+              className="whitespace-nowrap text-right text-lg font-bold text-white"
             >
               Sample Test Output
             </Label>
@@ -277,7 +270,7 @@ const Create = () => {
               +
             </Button>
           </div>
-          <div className="col-span-3 flex w-full flex-col">
+          <div className="col-span-3 gap-2 flex w-full flex-col">
             {sampleOutputs.map((output, index) => (
               <div key={index} className="flex items-center gap-2">
                 <Textarea
@@ -302,10 +295,10 @@ const Create = () => {
 
         {/* Sample Test Input Section */}
         <div className="grid grid-cols-4 items-center gap-4">
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex justify-end flex-row items-center gap-2">
             <Label
               htmlFor="sample_test_input"
-              className="whitespace-nowrap text-right text-lg font-bold text-primary"
+              className="whitespace-nowrap text-right text-lg font-bold text-white"
             >
               Sample Test Input
             </Label>
@@ -313,7 +306,7 @@ const Create = () => {
               +
             </Button>
           </div>
-          <div className="col-span-3 flex w-full flex-col">
+          <div className="col-span-3 gap-2 flex w-full flex-col">
             {sampleInputs.map((input, index) => (
               <div key={index} className="flex items-center gap-2">
                 <Textarea
@@ -338,10 +331,10 @@ const Create = () => {
 
         {/* Sample Explanation Section */}
         <div className="grid grid-cols-4 items-center gap-4">
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex justify-end flex-row items-center gap-2">
             <Label
               htmlFor="sample_explanation"
-              className="whitespace-nowrap text-right text-lg font-bold text-primary"
+              className="whitespace-nowrap text-right text-lg font-bold text-white"
             >
               Sample Explanation
             </Label>
@@ -349,7 +342,7 @@ const Create = () => {
               +
             </Button>
           </div>
-          <div className="col-span-3 flex w-full flex-col">
+          <div className="col-span-3 gap-2 flex w-full flex-col">
             {explanations.map((explanation, index) => (
               <div key={index} className="flex items-center gap-2">
                 <Textarea
