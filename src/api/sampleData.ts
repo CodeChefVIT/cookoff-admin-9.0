@@ -1,4 +1,4 @@
-import { QuestionResponse } from "./questions";
+import {type QuestionResponse } from "./questions";
 
 const generateSampleData = (): QuestionResponse[] => {
     const sampleQuestions: QuestionResponse[] = [];

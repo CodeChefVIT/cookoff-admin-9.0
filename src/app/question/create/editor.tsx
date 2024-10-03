@@ -1,6 +1,6 @@
 "use client"; // This registers <Editor> as a Client Component
-import { QuestionResponse } from "@/api/questions";
-import { BlockNoteEditor } from "@blocknote/core"; // Import the correct type
+import { type QuestionResponse } from "@/api/questions";
+import { type BlockNoteEditor } from "@blocknote/core"; // Import the correct type
 import "@blocknote/core/fonts/inter.css";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";

@@ -6,12 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { ApiError } from "next/dist/server/api-utils";
+import {type ApiError } from "next/dist/server/api-utils";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { FaHome } from "react-icons/fa";
 import { getData } from "./editor";
 
 // const Editor = dynamic(() => import("./editor"), { ssr: false });
