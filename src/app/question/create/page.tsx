@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { getData } from "./editor";
 
 // const Editor = dynamic(() => import("./editor"), { ssr: false });
 
@@ -32,10 +31,7 @@ const Create = () => {
 
   const createQuestion = useMutation({
     mutationFn: async (data: CreateQuestionParams) => {
-      const markdown = await getData();
-      if (markdown) {
-        data.description = markdown;
-      }
+
       data.input_format = inputFormats;
       data.points = +data.points;
       data.round = +data.round;
